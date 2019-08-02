@@ -15,17 +15,10 @@ Route::get('/', function () {
 	return view('welcome');
 });
 Route::resource('products','ProductController');
-
 Route::get('contacts', 'ContactUSController@index');
 Route::delete('contacts/{id}', 'ContactUSController@destroy');
-
-
 Route::get('contact-us', 'ContactUSController@contactUS');
 Route::post('contact-us', ['as'=>'contactus.store','uses'=>'ContactUSController@contactUSPost']);
-
-<<<<<<< HEAD
-Route::get('email1', 'EmailController@sendEmail');
-=======
 Route::get('email', 'EmailController@sendEmail');
 
->>>>>>> 0c40859a019cfcd28252a1aaa7eec0a9070262d3
+
